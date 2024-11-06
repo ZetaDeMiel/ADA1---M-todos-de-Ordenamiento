@@ -1,0 +1,13 @@
+def selection_sort(prices):
+    n = len(prices)
+    for i in range(n):
+        min_idx = i
+        for j in range(i + 1, n):
+            if prices[j] < prices[min_idx]:
+                min_idx = j
+        prices[i], prices[min_idx] = prices[min_idx], prices[i]
+    return prices
+
+prices = [120, 80, 150, 90, 60]
+sorted_prices = selection_sort(prices)
+print("Precios ordenados:", sorted_prices)
