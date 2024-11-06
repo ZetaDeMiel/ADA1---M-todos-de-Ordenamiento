@@ -1,0 +1,13 @@
+def insertion_sort(names):
+    for i in range(1, len(names)):
+        key = names[i]
+        j = i - 1
+        while j >= 0 and key < names[j]:
+            names[j + 1] = names[j]
+            j -= 1
+        names[j + 1] = key
+    return names
+
+names = ["Carlos", "Ana", "Luis", "Beatriz", "David"]
+sorted_names = insertion_sort(names)
+print("Nombres ordenados:", sorted_names)
