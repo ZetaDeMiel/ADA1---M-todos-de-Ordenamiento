@@ -1,0 +1,11 @@
+def bubble_sort(temperatures):
+    n = len(temperatures)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if temperatures[j] > temperatures[j + 1]:
+                temperatures[j], temperatures[j + 1] = temperatures[j + 1], temperatures[j]
+    return temperatures
+
+temperatures = [32, 24, 15, 30, 28, 20]
+sorted_temperatures = bubble_sort(temperatures)
+print("Temperaturas ordenadas:", sorted_temperatures)
