@@ -1,0 +1,13 @@
+def selection_sort(heights):
+    n = len(heights)
+    for i in range(n):
+        min_idx = i
+        for j in range(i + 1, n):
+            if heights[j] < heights[min_idx]:
+                min_idx = j
+        heights[i], heights[min_idx] = heights[min_idx], heights[i]
+    return heights
+
+heights = [160, 155, 170, 165, 150]
+sorted_heights = selection_sort(heights)
+print("Alturas ordenadas:", sorted_heights)
