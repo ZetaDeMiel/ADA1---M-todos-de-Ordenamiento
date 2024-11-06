@@ -1,0 +1,11 @@
+def bubble_sort(ages):
+    n = len(ages)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if ages[j] > ages[j + 1]:
+                ages[j], ages[j + 1] = ages[j + 1], ages[j]
+    return ages
+
+ages = [19, 21, 20, 18, 22, 23]
+sorted_ages = bubble_sort(ages)
+print("Edades ordenadas:", sorted_ages)
